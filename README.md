@@ -13,7 +13,7 @@ ollama pull deepseek-r1:7b
 ```
 4. Install ollama module for python
 ```
-pip install ollama
+pip install requirements.txt
 ```
 3. Run the program
 ```

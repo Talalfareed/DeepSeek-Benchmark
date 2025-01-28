@@ -1,9 +1,10 @@
 # Import ollama and time modules
 from ollama import chat
 import matplotlib.pyplot as plt
+import numpy as np
 import time
 import sys
-import numpy as np
+
 
 def test(model, Questions) -> float:
   totalTime = 0
@@ -22,8 +23,7 @@ def test(model, Questions) -> float:
     response = chat(model, messages=messages)
     end = time.time()
 
-    print("The time of execution for answer of question (", q, ") is:", 
-          (end-start) * 10**3, "ms")
+    print("The time of execution for answer of question (", q, ") is:", (end-start))
     #print(response['message']['content'])
     totalTime += (end-start)
 
