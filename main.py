@@ -52,7 +52,8 @@ def main() -> int:
 
   # Create names on the x-axis
   plt.xticks(y_pos, models)
-
+  plt.ylabel("Time in Secs")
+  plt.savefig('benchmarks/result1.png')
   # Show graphic
   plt.show()
 
