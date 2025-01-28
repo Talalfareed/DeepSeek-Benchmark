@@ -37,9 +37,12 @@ def main() -> int:
             "What is 0.6 as a percentage", "Simplify: 5 + 3 × 2", 
             "What is the square root of 64", "Calculate 2³ + 4²"]
 
+  # Names of the models
   models= ["llama3.1", 'deepseek-r1:1.5b', 'deepseek-r1:7b', 'deepseek-r1:8b']
 
   results = []
+
+  # Calculate avg time for test
   for model in models:
     print("Using model:", model)
     avg_time = test(model, Questions)
@@ -50,9 +53,11 @@ def main() -> int:
   # Create bars
   plt.bar(y_pos, results)
 
-  # Create names on the x-axis
+  # Create names on the x-axis, y-axis
   plt.xticks(y_pos, models)
   plt.ylabel("Time in Secs")
+
+  # Save 
   plt.savefig('benchmarks/result1.png')
   # Show graphic
   plt.show()
